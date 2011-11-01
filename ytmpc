@@ -66,7 +66,7 @@ parseGUIChoice()
 
 _zenity() {
   title="${title//&/&amp;}" # zenity requires ampersand characters to be escaped
-  choice=$(zenity --list --checklist --text="$title" --hide-header \
+  choice=$(zenity --list --checklist --text="$title"  \
              --column="1" --column="2" TRUE "$playText" FALSE "$dwnText")
   parseGUIChoice "$choice"
 }
