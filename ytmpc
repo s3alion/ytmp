@@ -110,7 +110,7 @@ while(true); do
           $VERBOSE && info "(youtube) video found. Getting title..."
           title="$(youtube-dl -e -- "$id")"
           $VERBOSE && info "(youtube) Getting video URL..."
-          vidurl="$(youtube-dl --max-quality="$YTQUAL" -g -- "$id")"
+          vidurl="$(youtube-dl "$YTQUAL" -g -- "$id")"
         ;;
         "vimeo") parseVimeo;;
       esac
